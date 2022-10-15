@@ -3,8 +3,9 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "./src"),
+    path: path.resolve(__dirname, "./dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -40,8 +41,15 @@ module.exports = {
     },
   },
   devServer: {
+    port: 8080,
+    historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, "./src"),
+    },
+    open: {
+      app: {
+        name: "google-chrome",
+      },
     },
   },
 };
