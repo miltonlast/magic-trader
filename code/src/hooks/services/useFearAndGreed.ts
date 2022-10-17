@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { IFearAndGreed } from "@interfaces/fear-and-greed/IFearAndGreed";
 import axios from "axios";
+import { IFearAndGreed } from "@interfaces/fear-and-greed/IFearAndGreed";
 
 const useFearAndGreed = () => {
-  const [fearAndGreed, setFearAndGreed] = useState<IFearAndGreed>();
+  const [fearAndGreed, setFearAndGreed] = useState<IFearAndGreed>(
+    <IFearAndGreed>{}
+  );
 
   const cancelToken = axios.CancelToken.source();
 

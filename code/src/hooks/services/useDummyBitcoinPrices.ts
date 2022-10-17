@@ -3,8 +3,9 @@ import axios from "axios";
 import { IBitcoinPrice } from "@interfaces/bitcoin-price/IBitcoinPrice";
 
 const useDummyBitcoinPrices = () => {
-  const [dummyBitcoinPrices, setDummyBitcoinPrice] =
-    useState<Array<IBitcoinPrice>>();
+  const [dummyBitcoinPrices, setDummyBitcoinPrice] = useState<
+    Array<IBitcoinPrice>
+  >(Array<IBitcoinPrice>());
 
   const cancelToken = axios.CancelToken.source();
 

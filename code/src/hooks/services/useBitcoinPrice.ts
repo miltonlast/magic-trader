@@ -1,9 +1,11 @@
-import { IBitcoinPrice } from "@interfaces/bitcoin-price/IBitcoinPrice";
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { IBitcoinPrice } from "@interfaces/bitcoin-price/IBitcoinPrice";
 
 const useBitcoinPrice = () => {
-  const [bitcoinPrice, setBitcoinPrice] = useState<IBitcoinPrice>();
+  const [bitcoinPrice, setBitcoinPrice] = useState<IBitcoinPrice>(
+    <IBitcoinPrice>{}
+  );
 
   const cancelToken = axios.CancelToken.source();
 
