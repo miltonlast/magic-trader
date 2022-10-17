@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <h1>Bitcoin Trader</h1>
 
-      <label htmlFor="notification-time">Select notification time</label>
+      <label htmlFor="notification-time">Select a time and you will receive a notification in about 30 seconds</label>
       <br />
       <input
         id="notification-time"
